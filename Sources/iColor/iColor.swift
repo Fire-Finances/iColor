@@ -1,5 +1,5 @@
 import SwiftUI
-
+#if (arch(arm64) || arch(x86_64))
 @available(watchOS 6.0, *)
 @available(OSX 10.15, *)
 @available(iOS 13.0, *)
@@ -108,3 +108,6 @@ fileprivate extension Comparable {
         return self.clamp(range.lowerBound, range.upperBound)
     }
 }
+
+#endif
+
